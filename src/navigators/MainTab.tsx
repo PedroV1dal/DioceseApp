@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AgendaScreen } from "../screens/AgendaScreen";
 import { HomeScreen } from "../screens/HomeScreen";
-import { IgrejaScreen } from "../screens/IgrejasScreen";
+import { IgrejaScreen } from "../screens/churchs/IgrejasScreen";
 
 const Tab = createBottomTabNavigator();
 
