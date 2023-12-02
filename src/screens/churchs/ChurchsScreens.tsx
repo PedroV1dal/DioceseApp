@@ -4,16 +4,21 @@ import {
   StyleSheet,
   SafeAreaView,
   FlatList,
-  View,
   Image,
+  TouchableOpacity,
 } from "react-native";
 import * as SQLite from "expo-sqlite";
-import { Church } from "./interface";
+import { IChurchs } from "./interface";
+import { useNavigation } from "@react-navigation/native";
+import { MainStackParamList } from "../../navigators/MainStack";
+import { StackNavigationProp } from "@react-navigation/stack";
 
 const db = SQLite.openDatabase("church.db");
 
 export const ChurchsScreen = () => {
-  const [churches, setChurches] = useState<Church[]>([]);
+  const [churches, setChurches] = useState<IChurchs[]>([]);
+
+  const navigation = useNavigation<StackNavigationProp<MainStackParamList>>();
 
   useEffect(() => {
     db.transaction((tx) => {
@@ -29,12 +34,15 @@ export const ChurchsScreen = () => {
     });
   }, []);
 
-  const renderItem = ({ item }: { item: Church }) => (
-    <View style={styles.listItem}>
+  const renderItem = ({ item }: { item: IChurchs }) => (
+    <TouchableOpacity
+      style={styles.listItem}
+      onPress={() => navigation.navigate("ChurchDetails", { church: item })}
+    >
       <Image source={{ uri: item.image }} style={styles.image} />
       <Text style={styles.name}>{item.name}</Text>
       <Text style={styles.address}>{item.address}</Text>
-    </View>
+    </TouchableOpacity>
   );
 
   return (

@@ -1,3 +1,3 @@
-export interface Church {
+export interface ChurchCalendar {
   name: string;
 }
