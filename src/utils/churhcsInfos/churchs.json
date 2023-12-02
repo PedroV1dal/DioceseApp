@@ -1,0 +1,110 @@
+[
+  {
+    "name": "PARÓQUIA SÃO JOÃO BATISTA",
+    "city": "Bertioga",
+    "address": "Rua Júlio Prestes, 69 - Centerville, Bertioga - State of São Paulo",
+    "phone": "(13) 3317-1838",
+    "lat": "-23.85412382950955",
+    "lon": "-46.13806492991317",
+    "creationDate": "29 de abril de 1994",
+    "about": "Criada por Dom David Picão, Bispo Diocesano. Enquanto Reitoria, teve como Reitor o Revdo. Mons. Nelson de Paula (12/02/1964), Pe. Adriano Seclen (22/04/1975). Pró-vigário Frei Celestino Cristofolini ofmCap. (18/04/1977). Reitor Pe. Primo Bernardi, CS (19/07/1977). Pró-Adm Paroquial Pe. Merquides Reis Andrade de Souza (22/05/1987), Pe. André Marszalek (06/01/1989), Pe. Jan Deg SDB (25/04/1989). Vigário Paroquial Mons. João Chiarot (16/04/1991). Reitor Pe. Davi Daniel Roland (01/10/1991). Pró-pároco Pe. João Chiarot (20/04/1993). Adm paroquial da pró-paróquia Mons. Nelson de Paula. Pró-Pároco Pe. José Cardoso da Silva (23/11/1993) e em 29/04/1994 tornou-se 1º Pároco. Atuou como 2º Pároco Pe. Claudenil Moraes da Silva (12/06/2000). 3º Pároco Pe. José Pez,DC (02/02/2003). 4º Pároco Pe. Luís Gonzaga Bolinelli,DC (29/09/2006). 5º Pároco Sílvio Luís dos Santos,DC (setembro de 2009).",
+    "schedule": "Terça, Quarta, Quinta e Sexta-Feita: 19h. Sábado: 9h. Domingo: 7h30, 19",
+    "image": "https://www.diocesedesantos.com.br/images/paroquias/paroquia-saojoaobatista_bertioga_2015.jpg"
+  },
+  {
+    "name": "PARÓQUIA SÃO JUDAS TADEU",
+    "city": "Cubatão",
+    "address": "Praça São Judas Tadeu, 28, Jardim Casqueiro - Cubatão",
+    "phone": "(13)3363-5032",
+    "lat": "-23.92771906035717",
+    "lon": "-46.407728147935295",
+    "creationDate": "03 de janeiro de 1961",
+    "about": "“O sr. Paschoal Marques Parisi, mais conhecido como Coronel Parisi, proprietário da gleba posteriormente loteada sob o nome de Jardim Casqueiro, era grande devoto de São Judas Tadeu.Em São Paulo, onde passou quase toda sua vida, pertencia à Comissão da Igreja de Nossa Senhora de Fátima. Sua devoção para com São Judas Tadeu levou-o a cooperar em obras diversas no Templo dedicado àquele Santo, na capital bandeirante, no bairro do Jabaquara. Ao lançar a venda, em lotes, da área hoje determinada Jardim Casqueiro, venda sem entrada inicial e a preço acessível a qualquer operário modalidade até então inédita na chamada Baixada Santista, quis ele facilitar ao pobre a aquisição do seu pedaço de terra, sob a égide de São Judas Tadeu, para que, através dos tempos, o glorioso Apóstolo mártir de Cristo, suscitasse na lembrança dos moradores do novél bairro o supremo destino do homem neste mundo, pois que, usufruindo dos bens terrenos e da tranquilidade de um lar oferecido aos seus com sacrifício e dedicação, não deve a criatura esquecer-se do seu Criador, cuja Presença lembrada é capaz de afastar do humano coração a ambição desmedida, o apego exagerado às coisas da terra, a inveja e ódio, fonte de tantos e tantos males.Desde logo ali ergueram seus tetos centenas de amigos. Sim, amigos; não fregueses, como se diz na linguagem comercial. O bondoso Coronel Parisi não era considerado o dono, o proprietário, e sim o juiz e conselheiro de todos, querido e estimado pelas crianças e pelos velhos.",
+    "schedule": "Segunda, Quinta e Sexta: 18h - Quarta: 19h - Domingo: 8h, 10h e 18h",
+    "image": "https://www.diocesedesantos.com.br/images/paroquias/paroquia-sao-judas-tadeu-cubatao.jpg"
+  },
+  {
+    "name": "BASÍLICA MENOR DE SANTO ANTÔNIO DO EMBARÉ",
+    "city": "Santos",
+    "address": "Av. Bartolomeu de Gusmão, 32 - Embaré - Santos - SP",
+    "phone": "(13) 3227-5977",
+    "lat": "-23.974144799377786",
+    "lon": "-46.32011024159283",
+    "creationDate": "22 de dezembro de 1922",
+    "about": "Desmembrada da Paróquia do Imaculado Coração de Maria, por Decreto de 22 de dezembro de 1922, sendo entregue aos Padres Franciscanos Capuchinhos, “ad nutum sancta e sedis”, a 20 de novembro de 1929, segundo Decreto da Sagrada Congregação do Concílio. Antes disso, esteve entregue primeiro aos cuidados do Pe. Gastão de Morais, sendo ainda Capela de Santo Antonio. Aos 28 de Janeiro de 1923 foi nomeado Frei Ângelo de Rezende, que tomou posse da Paróquia, recebendo-a das mãos do Pe. Gastão.",
+    "schedule": "Segunda a Sexta: 7h, 8h, 12h e 19h - Sábado: 7h, 8h, 12h e 17h - Domingo: 7h, 8h30, 10h, 11h30, 17h e 19h",
+    "image": "https://www.diocesedesantos.com.br/images/paroquias/santo_antonio_do_embare.jpg"
+  },
+  {
+    "name": "CONVENTO NOSSA SENHORA DO CARMO",
+    "city": "Santos",
+    "address": "Praça Barão do Rio Branco, 16 - Centro - Santos - SP",
+    "phone": "(13) 3233-4141",
+    "lat": "-23.932863358991394",
+    "lon": "-46.32717771808482",
+    "creationDate": "22 de dezembro de 1922",
+    "about": "-",
+    "schedule": "Segunda a Sexta-Feira: 7h30, 12h30 e 18h - Sábado: 7h30 e 17h - Domingo: 8h, 11h, 18hs",
+    "image": "https://www.diocesedesantos.com.br/images/paroquias/CONVENTO-N-SRA-DO-CARMO.jpg"
+  },
+  {
+    "name": "SANTUÁRIO SÃO JUDAS TADEU",
+    "city": "Santos",
+    "address": "Rua Saturnino de Brito, 112, Marapé  - Santos - SP",
+    "phone": "(13) 3251-4146",
+    "lat": "-23.953976830920833",
+    "lon": "-46.34565319324068",
+    "creationDate": "22 de dezembro de 1922",
+    "about": "Desmembrada da Paróquia Imaculado Coração de Maria e da Paróquia Nossa Senhora do Rosário de Pompéia por Decreto de 09 de agosto de 1954, de Dom Idílio José Soares. Parte desta Paróquia pertencia ao Valongo que não consta no Decreto, Pe. Roque Murano CMF, foi o primeiro vigário desta Paróquia até fevereiro de 1958.",
+    "schedule": "Segunda a Sexta: 7h, 8h, 12h e 19h - Sábado: 7h, 8h, 12h e 17h - Domingo: 7h, 8h30, 10h, 11h30, 17h e 19h",
+    "image": "https://www.diocesedesantos.com.br/images/BBF41C58-9190-4B10-B150-FC4A4187F85F.jpeg"
+  },
+  {
+    "name": "SANTUÁRIO SANTO ANTÔNIO DO VALONGO",
+    "city": "Santos",
+    "address": "Largo Marquês de Monte Alegre, 13, Valongo, Santos - SP",
+    "phone": "(13) 3233-4141",
+    "lat": "-23.931554201005785",
+    "lon": "-46.33365100615296",
+    "creationDate": "22 de dezembro de 1922",
+    "about": "Desmembrada da Paróquia do Rosário de Pompéia, por Decreto de 22 de dezembro de 1922, sendo entregue aos Padres Franciscanos Capuchinhos, “ad nutum sancta e sedis”, a 20 de novembro de 1929, segundo Decreto da Sagrada Congregação do Concílio. Antes disso, esteve entregue primeiro aos cuidados do Pe. Gastão de Morais, sendo ainda Capela de Santo Antonio. Aos 28 de Janeiro de 1923 foi nomeado Frei Ângelo de Rezende, que tomou posse da Paróquia, recebendo-a das mãos do Pe. Gastão.",
+    "schedule": "Terça: 12h, 17h - Quarta: 7h30",
+    "image": "https://www.diocesedesantos.com.br/images/paroquias/SANTO-ANTONIO-DO-VALONGO-SANTOS.png"
+  },
+  {
+    "name": "PARÓQUIA SÃO JORGE E SÃO BENEDITO",
+    "city": "Santos",
+    "address": "Praça Rubens Ferreira Martins, 41 - Estuário - Santos - SP ",
+    "phone": "(13) 3236-3528",
+    "lat": "-23.96658932558277",
+    "lon": "-46.30898187495312",
+    "creationDate": "29 de setembro de 1971",
+    "about": "Antes da Criação e Instalação da Igreja São Jorge Mártir, no período entre os anos de 1954 e 1959, o Revdo. Pe. Paulo Hornneaux de Moura, foi encarregado pelo então Bispo da época, Dom Idílio José Soares, a administrar os cuidados religiosos aos moradores da casas populares da Bacia do Macuco. Entre o período de 1959 a 1964, também desempenhou esta função o Revdo. Mons. Manoel Pestana, hoje Bispo Emérito da Arquidiocese de Anápolis em Goiás. Só, então, aos 29 de Setembro de 1971, Dom David Picão, então Bispo Diocesano de Santos, emitiu o Decreto de Criação da Paróquia São Jorge Mártir Santos/ SP, ao mesmo tempo em que também cria as Paróquias: Sagrado Coração de Jesus Santos/ SP, São Benedito Santos/ SP e São Francisco de Assis Cubatão/ SP.",
+    "schedule": "Segunda, Terça e Quinta-feira:18h30 - 1a Sexta-Feira: 17h, 19h30 - Sábado: 19h - Domingo: 8h, 10h, 19h",
+    "image": "https://www.diocesedesantos.com.br/images/paroquias/sao_jorge_martir.jpg"
+  },
+  {
+    "name": "PARÓQUIA SANTA CRUZ",
+    "city": "Santos",
+    "address": "Av. Senador Feijó, 444 - Vila Mathias - Santos - SP",
+    "phone": "(13) 3232-9410",
+    "lat": "-23.945057940723483",
+    "lon": "-46.3267181453495",
+    "creationDate": "15 de agosto de 1975",
+    "about": "Criada “ad experimentun” por dois anos, por Dom David Picão, pela Instrução Pastoral de nº 14 de 15 de agosto de 1973, tendo como Sede a Igreja Santa Cruz, anexa à residência dos Padres Camilianos. Através da Instrução Pastoral nº 18 de 29 de junho de 1975, foi definitivamente instituída esta Paróquia Pessoal.",
+    "schedule": "Terça, Quarta e Quinta-Feira: 18h30 - Sexta-Feira: 17h00 Missa da Saúde - Sábado: 17h00",
+    "image": "https://www.diocesedesantos.com.br/images/paroquias/paroquia-santa-cruz-santos-sp.jpg"
+  },
+  {
+    "name": "PARÓQUIA SÃO JOSÉ OPERÁRIO",
+    "city": "Santos",
+    "address": "Av. Cons. Rodrigues Alves, 224, Macuco - Santos - SP",
+    "phone": "(13) 3234-3530",
+    "lat": "-23.95385664768266",
+    "lon": "-46.316713842404745",
+    "creationDate": "01 de julho de 1925",
+    "about": "Desmembrada das Paróquias Catedral, Imaculado Coração de Maria e Embaré por Decreto de Dom José Maria Parreira Lara, de 01 de julho de 1925. Seu primeiro vigário foi o Cônego Dias Machado até março de 1928.",
+    "schedule": "Segunda-feira: 15h - Quarta a sexta-feira: 18h - Sábado: 19h - Domingo: 8h e 19h",
+    "image": "https://www.diocesedesantos.com.br/images/paroquias/sao_jose_operario_santos.jpg"
+  }
+]

@@ -1,32 +1,12 @@
-export interface Igreja {
-  id: number;
-  asset_id: number;
-  title: string;
-  alias: string;
-  introtext: string;
-  fulltext: string;
-  state: number;
-  catid: number;
-  created: string;
-  created_by: number;
-  created_by_alias: string;
-  modified: string;
-  modified_by: number;
-  checked_out: number;
-  checked_out_time: string;
-  publish_up: string;
-  publish_down: string;
-  images: string;
-  urls: string;
-  attribs: string;
-  version: number;
-  parentid: number;
-  ordering: number;
-  metakey: string;
-  metadesc: string;
-  access: number;
-  hits: number;
-  metadata: string;
-  featured: number;
-  note: number;
+export interface Church {
+    name: string;
+    city : string;
+    address : string;
+    phone : string;
+    lat : string;
+    lon : string;
+    creationDate : string;
+    about : string;
+    schedule : string;
+    image : string;
 }
