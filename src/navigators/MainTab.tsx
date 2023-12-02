@@ -4,6 +4,7 @@ import { AgendaScreen } from "../screens/calendar/AgendaScreen";
 import { ChurchsScreen } from "../screens/churchs/ChurchsScreens";
 import { MissaScreen } from "../screens/missa/Missas";
 import { MainStack } from "./MainStack";
+import { Image } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
@@ -17,6 +18,12 @@ export const MainTabNavigator = () => {
           headerBackgroundContainerStyle: {
             height: 86,
           },
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={require("../assets/igreja.png")}
+              style={{ width: focused ? 26 : 22, height: focused ? 26 : 22 }}
+            />
+          ),
         }}
         component={MainStack}
       />
