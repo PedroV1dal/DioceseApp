@@ -18,6 +18,10 @@ export const ChurchDetailsScreen = () => {
       <Image source={{ uri: church.image }} style={styles.image} />
       <Text style={styles.name}>{church.name}</Text>
       <Text style={styles.address}>{church.address}</Text>
+      <Text style={styles.creation}>
+        Data da criação: {church.creationDate}
+      </Text>
+      <Text style={styles.about}>{church.about}</Text>
     </View>
   );
 };
@@ -26,17 +30,31 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
   },
   image: {
     width: "100%",
-    height: 200, // Ajuste conforme necessário
+    height: 200,
   },
   name: {
     fontWeight: "bold",
-    fontSize: 20,
+    marginTop: 10,
+    fontSize: 18,
   },
   address: {
     color: "grey",
+    fontSize: 14,
+    marginTop: 10,
+  },
+  creation: {
+    color: "grey",
+    fontSize: 12,
+    fontWeight: "bold",
+    marginTop: 10,
+  },
+  about: {
+    marginTop: 20,
+    textAlign: "justify",
+    paddingHorizontal: 20,
   },
 });

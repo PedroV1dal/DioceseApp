@@ -34,6 +34,12 @@ export const MainTabNavigator = () => {
           headerBackgroundContainerStyle: {
             height: 86,
           },
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={require("../assets/calendario.png")}
+              style={{ width: focused ? 26 : 22, height: focused ? 26 : 22 }}
+            />
+          ),
         }}
         component={AgendaScreen}
       />
@@ -44,6 +50,12 @@ export const MainTabNavigator = () => {
           headerBackgroundContainerStyle: {
             height: 86,
           },
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={require("../assets/relogios.png")}
+              style={{ width: focused ? 26 : 22, height: focused ? 26 : 22 }}
+            />
+          ),
         }}
         component={MissaScreen}
       />

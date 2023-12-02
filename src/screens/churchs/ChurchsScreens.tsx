@@ -23,7 +23,7 @@ export const ChurchsScreen = () => {
   useEffect(() => {
     db.transaction((tx) => {
       tx.executeSql(
-        "SELECT name, address, image FROM church;",
+        "SELECT name, address, image, about, schedule, city, creationDate FROM church;",
         [],
         (_, { rows: { _array } }) => setChurches(_array),
         (_, err) => {
