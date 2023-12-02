@@ -1,8 +1,8 @@
-const degreesToRadians = (degrees: any) => {
+const degreesToRadians = (degrees: number) => {
   return degrees * Math.PI / 180;
 };
 
-export const getDistanceBetweenPoints = (lat1: , lon1, lat2, lon2) => {
+export const getDistanceBetweenPoints = (lat1 , lon1, lat2, lon2) => {
   const earthRadiusKm = 6371;
 
   const dLat = degreesToRadians(lat2 - lat1);

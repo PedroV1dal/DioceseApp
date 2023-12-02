@@ -25,7 +25,7 @@ import * as Location from "expo-location";
 import * as SQLite from "expo-sqlite";
 import { Church } from "./interface";
 
-export const IgrejaScreen = () => {
+export const MissaScreen = () => {
   const [church, setChurch] = useState<Church[]>([]);
   const [region, setRegion] = useState<Region | null>(null);
   const [searchTerm, setSearchTerm] = useState("");

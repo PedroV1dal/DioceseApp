@@ -1,8 +1,8 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AgendaScreen } from "../screens/calendar/AgendaScreen";
-import { HomeScreen } from "../screens/home/HomeScreen";
-import { IgrejaScreen } from "../screens/churchs/IgrejasScreen";
+import { ChurchsScreen } from "../screens/churchs/ChurchsScreens";
+import { MissaScreen } from "../screens/missa/Missas";
 
 const Tab = createBottomTabNavigator();
 
@@ -17,7 +17,7 @@ export const MainTabNavigator = () => {
             height: 86,
           },
         }}
-        component={HomeScreen}
+        component={ChurchsScreen}
       />
       <Tab.Screen
         name="Agenda"
@@ -30,14 +30,14 @@ export const MainTabNavigator = () => {
         component={AgendaScreen}
       />
       <Tab.Screen
-        name="Igrejas"
+        name="Missas"
         options={{
           title: "Igrejas",
           headerBackgroundContainerStyle: {
             height: 86,
           },
         }}
-        component={IgrejaScreen}
+        component={MissaScreen}
       />
     </Tab.Navigator>
   );

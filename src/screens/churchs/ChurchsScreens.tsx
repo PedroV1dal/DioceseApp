@@ -12,7 +12,7 @@ import { Church } from "./interface";
 
 const db = SQLite.openDatabase("church.db");
 
-export const HomeScreen = () => {
+export const ChurchsScreen = () => {
   const [churches, setChurches] = useState<Church[]>([]);
 
   useEffect(() => {
