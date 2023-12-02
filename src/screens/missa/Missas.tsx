@@ -123,7 +123,12 @@ export const MissaScreen = () => {
                 longitude: parseFloat(igreja.lon),
               }}
               onPress={() => openModal(igreja)}
-            />
+            >
+              <Image
+                source={require("../../assets/marker-igreja.png")}
+                style={{ width: 30, height: 30 }}
+              />
+            </Marker>
           ))}
         </MapView>
 
