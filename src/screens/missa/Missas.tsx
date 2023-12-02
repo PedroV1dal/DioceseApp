@@ -43,8 +43,6 @@ export const MissaScreen = () => {
   const openModal = (igreja: Church) => {
     setSelectedChurch(igreja);
     setModalVisible(true);
-
-    const distanceToChruch =
   };
 
   const closeModal = () => {
@@ -94,8 +92,6 @@ export const MissaScreen = () => {
       );
     });
   };
-
-
 
   const handleSearch = () => {
     const filtered = church.filter((church) => {

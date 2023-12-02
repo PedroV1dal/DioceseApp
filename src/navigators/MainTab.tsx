@@ -12,7 +12,7 @@ export const MainTabNavigator = () => {
       <Tab.Screen
         name="Home"
         options={{
-          title: "Home",
+          title: "Igrejas",
           headerBackgroundContainerStyle: {
             height: 86,
           },
@@ -32,7 +32,7 @@ export const MainTabNavigator = () => {
       <Tab.Screen
         name="Missas"
         options={{
-          title: "Igrejas",
+          title: "Missas",
           headerBackgroundContainerStyle: {
             height: 86,
           },
