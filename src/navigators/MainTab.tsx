@@ -14,9 +14,23 @@ export const MainTabNavigator = () => {
         name="Home"
         options={{
           title: "Igrejas",
-          headerBackgroundContainerStyle: {
-            height: 86,
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "#007bff",
+            elevation: 0,
+            shadowOpacity: 0,
           },
+          headerLeft: () => (
+            <Image
+              source={require("../assets/logo.png")}
+              style={{
+                width: 40,
+                height: 40,
+                padding: 10,
+                marginLeft: 10,
+              }}
+            />
+          ),
           tabBarIcon: ({ focused }) => (
             <Image
               source={require("../assets/igreja.png")}
@@ -30,9 +44,23 @@ export const MainTabNavigator = () => {
         name="Agenda"
         options={{
           title: "Calendário",
-          headerBackgroundContainerStyle: {
-            height: 86,
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "#007bff",
+            elevation: 0,
+            shadowOpacity: 0,
           },
+          headerLeft: () => (
+            <Image
+              source={require("../assets/logo.png")}
+              style={{
+                width: 40,
+                height: 40,
+                padding: 10,
+                marginLeft: 10,
+              }}
+            />
+          ),
           tabBarIcon: ({ focused }) => (
             <Image
               source={require("../assets/calendario.png")}
@@ -46,9 +74,23 @@ export const MainTabNavigator = () => {
         name="Missas"
         options={{
           title: "Missas",
-          headerBackgroundContainerStyle: {
-            height: 86,
+          headerTitleAlign: "center",
+          headerStyle: {
+            backgroundColor: "#164173",
+            elevation: 0,
+            shadowOpacity: 0,
           },
+          headerLeft: () => (
+            <Image
+              source={require("../assets/logo.png")}
+              style={{
+                width: 40,
+                height: 40,
+                padding: 10,
+                marginLeft: 10,
+              }}
+            />
+          ),
           tabBarIcon: ({ focused }) => (
             <Image
               source={require("../assets/relogios.png")}

@@ -9,9 +9,7 @@ function App() {
     insertDataFromJson();
   }, []);
 
-  return (
-    <HomeStack />
-  );
+  return <HomeStack />;
 }
 
 export default App;
