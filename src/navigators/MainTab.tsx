@@ -1,7 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AgendaScreen } from "../screens/calendar/AgendaScreen";
-import { ChurchsScreen } from "../screens/churchs/ChurchsScreens";
 import { MissaScreen } from "../screens/missa/Missas";
 import { MainStack } from "./MainStack";
 import { Image } from "react-native";

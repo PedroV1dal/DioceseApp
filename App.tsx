@@ -1,8 +1,7 @@
 import "react-native-gesture-handler";
-import { NavigationContainer } from "@react-navigation/native";
 import React, { useEffect } from "react";
-import { MainTabNavigator } from "./src/navigators/MainTab";
 import { initDB, insertDataFromJson } from "./src/db/database";
+import HomeStack from "./src/navigators/HomeStack";
 
 function App() {
   useEffect(() => {
@@ -11,9 +10,7 @@ function App() {
   }, []);
 
   return (
-    <NavigationContainer>
-      <MainTabNavigator />
-    </NavigationContainer>
+    <HomeStack />
   );
 }
 
