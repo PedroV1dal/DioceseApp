@@ -8,7 +8,6 @@ import { Agenda } from "react-native-calendars";
 const db = SQLite.openDatabase("church.db");
 
 export const AgendaScreen = () => {
-  const [churches, setChurches] = useState<ChurchCalendar[]>([]);
   const [res, setRes] = useState()
 
   const currentMonth = new Date().getMonth() + 1
@@ -27,38 +26,58 @@ export const AgendaScreen = () => {
   useEffect(() => {
     (async () => {
       const {data} = await api.post(url)
-      const mappedData = data?.data?.map((item: any) => ({
-        title: item?.title,
-        color: item?.backgroundColor,
-        allDay: item?.allDay,
-        startHour: item?.allDay ? undefined : item?.start.slice(item?.start.indexOf('T') + 1, item?.end?.lastIndexOf(':')),
-        endHour: item?.allDay ? undefined : item?.end.slice(item?.end.indexOf('T') + 1, item?.end?.lastIndexOf(':'))
-      }))
-      setRes(mappedData)
+      const mappedData: Array<any> = data?.data?.map((item: any) => {
+        const date = item?.allDay ? item?.start : item?.start.slice(0, item?.start.indexOf('T'))
+        const startTime = item?.allDay ? undefined : item?.start?.slice(item?.start.indexOf('T') + 1)
+        const endTime = item?.allDay ? undefined : item?.end?.slice(item?.end.indexOf('T') + 1)
+        
+        return ({
+            [date]: [{name: item?.title, day: item?.allDay ? undefined : `${startTime} - ${endTime}`}]
+        })
+      })
+      const mergedData = mappedData.reduce((result, current) => {
+        const currentDate = Object.keys(current)[0];
+        const existingItem = result.find((item: any) => item[currentDate]);
+        if (existingItem) {
+          existingItem[currentDate] = existingItem[currentDate].concat(current[currentDate]);
+        } else {
+          result.push(current);
+        }
+        return result;
+      }, []);
+      const transformedObject = mergedData.reduce((result: any, item: any) => {
+        const [key, value] = Object.entries(item)[0];
+        result[key] = value;
+        return result;
+      }, {});
+      setRes(transformedObject)
     })()
   }, [])
 
   return (
     <SafeAreaView style={styles.container}>
       <Agenda
-        markingType="multi-dot"
-        items={{
-          '2023-12-01': [{name: 'Cycling'}, {name: 'Walking'}, {name: 'Running'}],
-          '2023-12-02': [{name: 'Writing'}]
-        }}
-        renderItem={(item, isFirst) => (
+        scrollsToTop
+        items={res}
+        renderItem={(item) => (
           <View style={styles.item}>
             <Text style={styles.itemText}>{item.name}</Text>
+            {item.day && (
+              <Text style={styles.itemTextDate}>{item.day}</Text>
+            )}
           </View>
         )}
         renderEmptyData={() => (
-          <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
-            <Text style={styles.itemText}>Nenhum evento hoje.</Text>
+          <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
+            <Text style={styles.itemTextDate}>Nenhum evento hoje.</Text>
           </View>
         )}
         minDate={startDateStringCal}
         maxDate={endDateString}
         onDayChange={(day) => console.log(day)}
+        hideExtraDays={false}
+        showClosingKnob
+        showOnlySelectedDayItems
       />
     </SafeAreaView>
   );
@@ -77,6 +96,10 @@ const styles = StyleSheet.create({
     marginTop: 17,
   },
   itemText: {
+    color: '#888',
+    fontSize: 20,
+  },
+  itemTextDate: {
     color: '#888',
     fontSize: 16,
   },

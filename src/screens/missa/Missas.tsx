@@ -30,6 +30,7 @@ import { Church } from "./interface";
 export const MissaScreen = () => {
   const [church, setChurch] = useState<Church[]>([]);
   const [region, setRegion] = useState<Region | null>(null);
+  const [selectedCoords, setSelectedCoords] = useState<Region | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredChurches, setFilteredChurches] = useState<Church[]>([]);
   const [isModalVisible, setModalVisible] = useState(false);
@@ -145,7 +146,7 @@ export const MissaScreen = () => {
       <GestureHandlerRootView style={{ flex: 1 }}>
         <MapView
           style={styles.map}
-          region={region || undefined}
+          region={selectedCoords || region || undefined}
           showsUserLocation={true}
         >
           {filteredChurches.map((igreja) => (
@@ -155,7 +156,12 @@ export const MissaScreen = () => {
                 latitude: parseFloat(igreja.lat),
                 longitude: parseFloat(igreja.lon),
               }}
-              onPress={() => openModal(igreja)}
+              onPress={() => {openModal(igreja); setSelectedCoords({
+                latitude: parseFloat(igreja.lat),
+                longitude: parseFloat(igreja.lon),
+                latitudeDelta: 0.1,
+                longitudeDelta: 0.1
+              })}}
             >
               <Image
                 source={require("../../assets/marker-igreja.png")}
@@ -184,7 +190,12 @@ export const MissaScreen = () => {
             scrollEnabled={true}
             keyExtractor={(item) => item.name.toString()}
             renderItem={({ item }) => (
-              <TouchableOpacity onPress={() => openModal(item)} style={styles.listItem}>
+              <TouchableOpacity onPress={() => {openModal(item); setSelectedCoords({
+                latitude: parseFloat(item.lat),
+                longitude: parseFloat(item.lon),
+                latitudeDelta: 0.1,
+                longitudeDelta: 0.1
+              })}} style={styles.listItem}>
                 <Text style={styles.title}>{item.name}</Text>
                 <Text style={styles.description}>{item.address}</Text>
               </TouchableOpacity>
