@@ -19,6 +19,8 @@ import {
   Modal,
   Linking,
   Platform,
+  KeyboardAvoidingView,
+  Keyboard,
 } from "react-native";
 import MapView, { Marker, Region } from "react-native-maps";
 import * as Location from "expo-location";
@@ -33,12 +35,33 @@ export const MissaScreen = () => {
   const [isModalVisible, setModalVisible] = useState(false);
   const [selectedChurch, setSelectedChurch] = useState<Church | null>(null);
   const [distace, setDistance] = useState(0);
+  const [keyboardVisible, setKeyboardVisible] = useState(false)
+  const [hasFetched, setHasFetched] = useState(false)
 
   const db = SQLite.openDatabase("church.db");
+  
+  useEffect(() => {
+    const keyboardDidShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      () => {
+        setKeyboardVisible(true);
+      },
+    );
+    const keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      () => {
+        setKeyboardVisible(false);
+      },
+    );
+    return () => {
+      keyboardDidShowListener.remove();
+      keyboardDidHideListener.remove();
+    };
+  }, []);
 
   const bottomSheetRef = useRef<BottomSheet>(null);
 
-  const snapPoints = useMemo(() => ["22%", "60%"], []);
+  const snapPoints = useMemo(() => keyboardVisible ? ['60%', '100%'] : ["22%", "60%", '100%'], [keyboardVisible]);
 
   const openModal = (igreja: Church) => {
     setSelectedChurch(igreja);
@@ -74,7 +97,17 @@ export const MissaScreen = () => {
 
   useEffect(() => {
     fetchChurches();
+    setHasFetched(true)
   }, []);
+
+  useEffect(() => {
+    if (hasFetched) {
+      const timeout = setTimeout(() => {
+        handleSearch()
+      }, 500);
+      return () => clearTimeout(timeout)
+    }
+  }, [searchTerm])
 
   const fetchChurches = async () => {
     db.transaction((tx) => {
@@ -131,7 +164,6 @@ export const MissaScreen = () => {
             </Marker>
           ))}
         </MapView>
-
         <BottomSheet
           ref={bottomSheetRef}
           index={0}
@@ -146,22 +178,16 @@ export const MissaScreen = () => {
               value={searchTerm}
               onChangeText={setSearchTerm}
             />
-            <TouchableOpacity
-              onPress={handleSearch}
-              style={styles.searchButton}
-            >
-              <Text style={styles.searchButtonText}>Buscar Igreja</Text>
-            </TouchableOpacity>
           </View>
           <FlatList
             data={filteredChurches}
             scrollEnabled={true}
             keyExtractor={(item) => item.name.toString()}
             renderItem={({ item }) => (
-              <View style={styles.listItem}>
+              <TouchableOpacity onPress={() => openModal(item)} style={styles.listItem}>
                 <Text style={styles.title}>{item.name}</Text>
                 <Text style={styles.description}>{item.address}</Text>
-              </View>
+              </TouchableOpacity>
             )}
           />
         </BottomSheet>
@@ -186,6 +212,8 @@ export const MissaScreen = () => {
           />
           <View>
             <Text style={styles.modalAddress}>{selectedChurch?.address}</Text>
+            <Text/>
+            <Text style={styles.modalAddress}>{selectedChurch?.schedule}</Text>
           </View>
         </View>
       </Modal>
