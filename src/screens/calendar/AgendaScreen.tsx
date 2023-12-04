@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Text, StyleSheet, SafeAreaView, View, FlatList } from "react-native";
 import * as SQLite from "expo-sqlite";
-import { Church } from "./interface";
+import { ChurchCalendar } from "./interface";
 
 const db = SQLite.openDatabase("church.db");
 
 export const AgendaScreen = () => {
-  const [churches, setChurches] = useState<Church[]>([]);
+  const [churches, setChurches] = useState<ChurchCalendar[]>([]);
 
   useEffect(() => {
     db.transaction((tx) => {
@@ -22,7 +22,7 @@ export const AgendaScreen = () => {
     });
   }, []);
 
-  const renderItem = ({ item }: { item: Church }) => (
+  const renderItem = ({ item }: { item: ChurchCalendar }) => (
     <View style={styles.listItem}>
       <Text style={styles.name}>{item.name}</Text>
     </View>
