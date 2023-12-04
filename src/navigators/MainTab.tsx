@@ -76,7 +76,7 @@ export const MainTabNavigator = () => {
           title: "Missas",
           headerTitleAlign: "center",
           headerStyle: {
-            backgroundColor: "#164173",
+            backgroundColor: "#007bff",
             elevation: 0,
             shadowOpacity: 0,
           },
