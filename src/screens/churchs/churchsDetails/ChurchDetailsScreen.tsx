@@ -10,6 +10,10 @@ export const ChurchDetailsScreen = () => {
   const navigation = useNavigation();
   const { church } = route.params as { church: IChurchs };
 
+  useLayoutEffect(() => {
+    navigation.setOptions({ title: church.name });
+  }, [navigation, church.name]);
+
   return (
     <ScrollView contentContainerStyle={styles.container} scrollEnabled={true}>
       <Image source={{ uri: church.image }} style={styles.image} />
