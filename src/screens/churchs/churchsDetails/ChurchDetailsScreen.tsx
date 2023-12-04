@@ -2,7 +2,7 @@ import React, { useLayoutEffect } from "react";
 import { useRoute } from "@react-navigation/native";
 import { IChurchs } from "../interface";
 import { useNavigation } from "@react-navigation/native";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { Text, Image, StyleSheet, ScrollView } from "react-native";
 
 export const ChurchDetailsScreen = () => {
   const route = useRoute();
@@ -14,7 +14,7 @@ export const ChurchDetailsScreen = () => {
   }, [navigation, church.name]);
 
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.container}>
       <Image source={{ uri: church.image }} style={styles.image} />
       <Text style={styles.name}>{church.name}</Text>
       <Text style={styles.address}>{church.address}</Text>
@@ -22,7 +22,7 @@ export const ChurchDetailsScreen = () => {
         Data da criação: {church.creationDate}
       </Text>
       <Text style={styles.about}>{church.about}</Text>
-    </View>
+    </ScrollView>
   );
 };
 
