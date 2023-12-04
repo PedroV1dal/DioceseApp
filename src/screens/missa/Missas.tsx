@@ -223,7 +223,6 @@ export const MissaScreen = () => {
           />
           <View>
             <Text style={styles.modalAddress}>{selectedChurch?.address}</Text>
-            <Text/>
             <Text style={styles.modalAddress}>{selectedChurch?.schedule}</Text>
           </View>
         </View>
@@ -331,12 +330,12 @@ const styles = StyleSheet.create({
   modalImage: {
     width: "100%",
     height: 220,
-    borderRadius: 5,
   },
   closeButton: {
     alignSelf: "flex-end",
     padding: 5,
-    borderRadius: 10,
+    width: 25,
+    borderRadius: 10000,
     backgroundColor: "black",
     alignItems: "center",
   },
@@ -349,5 +348,6 @@ const styles = StyleSheet.create({
   modalAddress: {
     fontSize: 16,
     fontWeight: "bold",
+    padding: 10
   },
 });

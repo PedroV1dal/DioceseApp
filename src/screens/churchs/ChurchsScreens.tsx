@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontWeight: "bold",
+    paddingVertical: 5
   },
   address: {
     color: "grey",

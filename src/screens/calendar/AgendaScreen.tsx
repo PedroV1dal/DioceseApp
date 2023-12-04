@@ -69,7 +69,7 @@ export const AgendaScreen = () => {
         )}
         renderEmptyData={() => (
           <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
-            <Text style={styles.itemTextDate}>Nenhum evento hoje.</Text>
+            <Text style={styles.itemTextDate}>Nenhum evento nessa data.</Text>
           </View>
         )}
         minDate={startDateStringCal}
